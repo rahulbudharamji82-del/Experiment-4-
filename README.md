@@ -1,7 +1,106 @@
-# axios // helpers
+Weather Information App 🌦️
+📌 Aim
+To develop a weather application using JavaScript ES6 features to fetch and display weather information.
 
-The modules found in `helpers/` should be generic modules that are _not_ specific to the domain logic of axios. These modules could theoretically be published to npm on their own and consumed by other modules or apps. Some examples of generic modules are things like:
+📝 Description
+This project is a weather information application that retrieves weather data for a specified city using the OpenWeatherMap API.
 
-- Browser polyfills
-- Managing cookies
-- Parsing HTTP headers
+The backend is built using Node.js and Express.js. Axios is used to send HTTP requests to the weather API, while JavaScript Promises and async/await handle asynchronous operations.
+
+The application returns the city's temperature in Celsius.
+
+✨ Features
+Fetch weather information for a specified city.
+Retrieve real-time weather data from OpenWeatherMap.
+Display temperature in Celsius.
+Use async/await for asynchronous operations.
+Handle errors when weather data cannot be retrieved.
+Serve frontend files through Express.js.
+🛠️ Technologies Used
+HTML, CSS, JavaScript — Frontend
+Node.js — JavaScript runtime
+Express.js — Backend server
+Axios — HTTP requests
+OpenWeatherMap API — Weather data provider
+JavaScript ES6 — Promises and async/await
+📂 Project Structure
+weather-information-app/
+├── public/                 # Frontend files
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── server.js               # Backend server
+├── package.json            # Project dependencies
+├── package-lock.json       # Dependency lock file
+├── approachofexperiment.md # Project guide
+└── README.md               # Project documentation
+Note: The frontend filenames shown above are examples. Keep the actual filenames in your repository.
+
+⚙️ Installation and Setup
+Prerequisites
+Node.js and npm installed.
+An OpenWeatherMap API key.
+Step 1: Clone the repository
+git clone YOUR_GITHUB_REPOSITORY_URL
+Replace YOUR_GITHUB_REPOSITORY_URL with your GitHub repository URL.
+
+Step 2: Navigate to the project folder
+cd weather-information-app
+Step 3: Install dependencies
+npm install
+Step 4: Configure the API key
+Obtain an API key from OpenWeatherMap.
+
+Store your API key securely as an environment variable named OPENWEATHER_API_KEY. Update server.js to read the key from the environment instead of hardcoding it.
+
+Step 5: Start the backend server
+node server.js
+The server should display:
+
+Server running at http://localhost:3000
+Step 6: Open the application
+Open the following address in your browser:
+
+http://localhost:3000
+
+You can also test the weather endpoint by visiting:
+
+http://localhost:3000/weather/London
+Replace London with the name of another city.
+
+🔌 API Endpoint
+Endpoint: /weather/:city
+
+Method: GET
+
+Example request:
+
+GET /weather/London
+Example response:
+
+{
+  "temperature": 18.5
+}
+The temperature shown is an illustrative example; the actual value depends on the weather API response.
+
+🔄 How It Works
+The user requests weather information for a city.
+The Express.js server receives the request.
+Axios sends a request to the OpenWeatherMap API.
+The API returns the weather data.
+JavaScript async/await handles the asynchronous request.
+The server extracts the temperature and returns it as JSON.
+If an error occurs, the server returns an error response.
+🎯 Learning Outcomes
+Understand JavaScript ES6 features.
+Learn how to use Promises and async/await.
+Understand REST API requests.
+Build a basic backend using Express.js.
+Use Axios to retrieve external API data.
+Handle errors in asynchronous applications.
+🔮 Future Improvements
+Display humidity, wind speed, and weather conditions.
+Add a weather search interface.
+Improve error messages for invalid city names.
+Add responsive styling for mobile devices.
+Display weather icons and forecasts.
